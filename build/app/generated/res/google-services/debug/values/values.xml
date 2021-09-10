@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">276749994329-1b6h2rn6c3s5tnnavgb9slefmcapcbjc.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">276749994329</string>
+    <string name="google_api_key" translatable="false">AIzaSyAs4tcCWFt993_DCNs8NoXxsIczoJfFfm4</string>
+    <string name="google_app_id" translatable="false">1:276749994329:android:a35f3ead0db4814244a448</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAs4tcCWFt993_DCNs8NoXxsIczoJfFfm4</string>
+    <string name="google_storage_bucket" translatable="false">calories-counter-a865d.appspot.com</string>
+    <string name="project_id" translatable="false">calories-counter-a865d</string>
+</resources>

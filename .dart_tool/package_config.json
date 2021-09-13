@@ -92,8 +92,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_barcode_scanner",
+      "rootUri": "file:///Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_barcode_scanner-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -242,7 +254,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-13T20:33:12.419167Z",
+  "generated": "2021-09-13T21:20:34.086340Z",
   "generator": "pub",
   "generatorVersion": "2.14.0"
 }

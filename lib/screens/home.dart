@@ -18,10 +18,10 @@ class UserInfoScreen extends StatefulWidget {
 }
 Future(void) barscan() async{
   String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-    COLOR_CODE, 
-    CANCEL_BUTTON_TEXT, 
-    isShowFlashIcon, 
-    scanMode);
+    #40e0d0, 
+    "Retry", 
+    true, 
+    scanMode.Barcode;
 }
 class _UserInfoScreenState extends State<UserInfoScreen> {
   late User _user;

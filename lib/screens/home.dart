@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:caloriescounters/res/custom_colors.dart';
-import 'package:caloriescounters/screens/sign_in_screen.dart';
+import 'package:caloriescounters/screens/login.dart';
 import 'package:caloriescounters/utils/authentication.dart';
 import 'package:caloriescounters/widgets/app_bar_title.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class UserInfoScreen extends StatefulWidget {
   const UserInfoScreen({Key? key, required User user})
@@ -15,7 +16,13 @@ class UserInfoScreen extends StatefulWidget {
   @override
   _UserInfoScreenState createState() => _UserInfoScreenState();
 }
-
+Future(void) barscan() async{
+  String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+    COLOR_CODE, 
+    CANCEL_BUTTON_TEXT, 
+    isShowFlashIcon, 
+    scanMode);
+}
 class _UserInfoScreenState extends State<UserInfoScreen> {
   late User _user;
   bool _isSigningOut = false;
@@ -114,6 +121,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   letterSpacing: 0.5,
                 ),
               ),
+              TextButton(
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                ),
+                onPressed: ()=> barscan(),
+                child: Text('Scan Barcode'),
+              )
               SizedBox(height: 24.0),
               Text(
                 'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',

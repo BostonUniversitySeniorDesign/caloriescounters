@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:caloriescounters/res/custom_colors.dart';
@@ -17,6 +19,48 @@ class UserInfoScreen extends StatefulWidget {
 
   @override
   _UserInfoScreenState createState() => _UserInfoScreenState();
+}
+
+class fdaAPI {
+  List<Foods> foods;
+
+  fdaAPI({required this.foods});
+
+  factory fdaAPI.fromJson(Map<String, dynamic> json) => fdaAPI(
+        foods: List<Foods>.from(json["foods"].map((x) => Foods.fromJson(x))),
+      );
+}
+
+class Foods {
+  List<FoodNutrients> foodNutrients;
+
+  Foods({required this.foodNutrients});
+
+  factory Foods.fromJson(Map<String, dynamic> json) => Foods(
+        foodNutrients: List<FoodNutrients>.from(
+            json["foodNutrients"].map((x) => FoodNutrients.fromJson(x))),
+      );
+}
+
+class FoodNutrients {
+  FoodNutrients({
+    required this.nutrientId,
+    required this.nutrientName,
+    required this.nutrientNumber,
+    required this.value,
+  });
+
+  int nutrientId;
+  String nutrientName;
+  String nutrientNumber;
+  int value;
+
+  factory FoodNutrients.fromJson(Map<String, dynamic> json) => FoodNutrients(
+        nutrientId: json["nutrientId"],
+        nutrientName: json["nutrientName"],
+        nutrientNumber: json["nutrientNumber"],
+        value: json["value"],
+      );
 }
 
 class _UserInfoScreenState extends State<UserInfoScreen> {
@@ -55,6 +99,38 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
     setState(() => this.scanResult = scanResult);
 
     print(scanResult);
+    fetchAPI();
+  }
+
+  Future fetchAPI() async {
+    String keyAPI = '24UiyDidqSIdtVPaIMo0NnR8pZuE6CrzWqpmwjwZ';
+    //scanResult = '022000159359';
+    final response = await http.get(Uri.parse(
+        'https://api.nal.usda.gov/fdc/v1/foods/search?query=$scanResult&api_key=$keyAPI'));
+    String scanCalorie;
+    double calories = 0;
+    Map<String, dynamic> nutrientsVal;
+    try {
+      // If the server did return a 200 OK response,
+      // then parse the JSON.
+      nutrientsVal = json.decode(response.body.toString());
+      List<dynamic> data = nutrientsVal["foods"];
+      List<dynamic> data2 = data[0]["foodNutrients"];
+      print(data2);
+      double proteinValue = data2[0]["value"].toDouble() * 4;
+      double fatValue = data2[1]["value"].toDouble() * 9;
+      double carbValue = data2[2]["value"].toDouble() * 4;
+      calories = proteinValue + fatValue + carbValue;
+      scanCalorie = calories.toStringAsFixed(1);
+      print(scanCalorie);
+    } on PlatformException {
+      // If the server did not return a 200 OK response,
+      // then throw an exception.
+      scanCalorie = 'Failed to load album';
+    }
+    setState(() => this.scanCalorie = scanCalorie);
+
+    print(scanCalorie);
   }
 
   @override
@@ -138,11 +214,16 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       MaterialStateProperty.all<Color>(Colors.blue),
                 ),
                 onPressed: () => barcodescan(),
+                //onPressed: () => fetchAPI(),
                 child: Text('Scan Barcode'),
               ),
               SizedBox(height: 24.0),
               Text(
                 scanResult == null ? 'Scan A code' : 'Scan result: $scanResult',
+                style: TextStyle(fontSize: 18),
+              ),
+              Text(
+                scanCalorie == null ? 'Scan A code' : 'Calories: $scanCalorie',
                 style: TextStyle(fontSize: 18),
               ),
               Text(

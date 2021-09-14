@@ -4,7 +4,9 @@ import 'package:caloriescounters/res/custom_colors.dart';
 import 'package:caloriescounters/screens/sign_in_screen.dart';
 import 'package:caloriescounters/utils/authentication.dart';
 import 'package:caloriescounters/widgets/app_bar_title.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:http/http.dart' as http;
 
 class UserInfoScreen extends StatefulWidget {
   const UserInfoScreen({Key? key, required User user})
@@ -16,16 +18,11 @@ class UserInfoScreen extends StatefulWidget {
   @override
   _UserInfoScreenState createState() => _UserInfoScreenState();
 }
-Future<void> barscan() async{
-  String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-    '#40e0d0', 
-    'Retry', 
-    true, 
-    ScanMode.BARCODE);
-    print(barcodeScanRes);
-}
+
 class _UserInfoScreenState extends State<UserInfoScreen> {
   late User _user;
+  String? scanResult;
+  String? scanCalorie;
   bool _isSigningOut = false;
 
   Route _routeToSignInScreen() {
@@ -45,6 +42,19 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
         );
       },
     );
+  }
+
+  Future barcodescan() async {
+    String scanResult;
+    try {
+      scanResult = await FlutterBarcodeScanner.scanBarcode(
+          '#ff6666', 'Cancel', true, ScanMode.BARCODE);
+    } on PlatformException {
+      scanResult = 'Failed to get platform version.';
+    }
+    setState(() => this.scanResult = scanResult);
+
+    print(scanResult);
   }
 
   @override
@@ -124,12 +134,17 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               ),
               TextButton(
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
                 ),
-                onPressed: ()=> barscan(),
+                onPressed: () => barcodescan(),
                 child: Text('Scan Barcode'),
               ),
               SizedBox(height: 24.0),
+              Text(
+                scanResult == null ? 'Scan A code' : 'Scan result: $scanResult',
+                style: TextStyle(fontSize: 18),
+              ),
               Text(
                 'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',
                 style: TextStyle(

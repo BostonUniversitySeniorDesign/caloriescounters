@@ -143,10 +143,10 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomColors.firebaseNavy,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: CustomColors.firebaseNavy,
+        backgroundColor: Colors.black,
         title: AppBarTitle(),
       ),
       body: SafeArea(
@@ -160,34 +160,34 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(),
-              _user.photoURL != null
-                  ? ClipOval(
-                      child: Material(
-                        color: CustomColors.firebaseGrey.withOpacity(0.3),
-                        child: Image.network(
-                          _user.photoURL!,
-                          fit: BoxFit.fitHeight,
-                        ),
-                      ),
-                    )
-                  : ClipOval(
-                      child: Material(
-                        color: CustomColors.firebaseGrey.withOpacity(0.3),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Icon(
-                            Icons.person,
-                            size: 60,
-                            color: CustomColors.firebaseGrey,
-                          ),
-                        ),
-                      ),
-                    ),
+              // _user.photoURL != null
+              //     ? ClipOval(
+              //         child: Material(
+              //           color: CustomColors.firebaseGrey.withOpacity(0.3),
+              //           child: Image.network(
+              //             _user.photoURL!,
+              //             fit: BoxFit.fitHeight,
+              //           ),
+              //         ),
+              //       )
+              //     : ClipOval(
+              //         child: Material(
+              //           color: CustomColors.firebaseGrey.withOpacity(0.3),
+              //           child: Padding(
+              //             padding: const EdgeInsets.all(16.0),
+              //             child: Icon(
+              //               Icons.person,
+              //               size: 60,
+              //               color: CustomColors.firebaseGrey,
+              //             ),
+              //           ),
+              //         ),
+              //       ),
               SizedBox(height: 16.0),
               Text(
                 'Hello',
                 style: TextStyle(
-                  color: CustomColors.firebaseGrey,
+                  color: Colors.lightGreen,
                   fontSize: 26,
                 ),
               ),
@@ -195,23 +195,16 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 _user.displayName!,
                 style: TextStyle(
-                  color: CustomColors.firebaseYellow,
+                  color: Colors.lightGreen,
                   fontSize: 26,
                 ),
               ),
               SizedBox(height: 8.0),
-              Text(
-                '( ${_user.email!} )',
-                style: TextStyle(
-                  color: CustomColors.firebaseOrange,
-                  fontSize: 20,
-                  letterSpacing: 0.5,
-                ),
-              ),
+              // email
               TextButton(
                 style: ButtonStyle(
                   foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue),
+                      MaterialStateProperty.all<Color>(Colors.white),
                 ),
                 onPressed: () => barcodescan(),
                 //onPressed: () => fetchAPI(),
@@ -225,6 +218,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 scanCalorie == null ? 'Scan A code' : 'Calories: $scanCalorie',
                 style: TextStyle(fontSize: 18),
+              ),
+              Text(
+                '',
+                style: TextStyle(
+                    color: CustomColors.firebaseGrey.withOpacity(0.8),
+                    fontSize: 65,
+                    letterSpacing: 0.2),
               ),
               Text(
                 'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',

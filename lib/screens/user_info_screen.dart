@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -21,22 +22,24 @@ class UserInfoScreen extends StatefulWidget {
   _UserInfoScreenState createState() => _UserInfoScreenState();
 }
 
-class fdaAPI {
-  List<Foods> foods;
+class FdaAPI {
+  List<Foods> foods = [];
 
-  fdaAPI({required this.foods});
+  FdaAPI({required this.foods});
 
-  factory fdaAPI.fromJson(Map<String, dynamic> json) => fdaAPI(
+  factory FdaAPI.fromJson(Map<String, dynamic> json) => FdaAPI(
         foods: List<Foods>.from(json["foods"].map((x) => Foods.fromJson(x))),
       );
 }
 
 class Foods {
-  List<FoodNutrients> foodNutrients;
+  String description;
+  List<FoodNutrients> foodNutrients = [];
 
-  Foods({required this.foodNutrients});
+  Foods({required this.description, required this.foodNutrients});
 
   factory Foods.fromJson(Map<String, dynamic> json) => Foods(
+        description: json["description"],
         foodNutrients: List<FoodNutrients>.from(
             json["foodNutrients"].map((x) => FoodNutrients.fromJson(x))),
       );
@@ -53,14 +56,27 @@ class FoodNutrients {
   int nutrientId;
   String nutrientName;
   String nutrientNumber;
-  int value;
+  double value;
 
   factory FoodNutrients.fromJson(Map<String, dynamic> json) => FoodNutrients(
         nutrientId: json["nutrientId"],
         nutrientName: json["nutrientName"],
         nutrientNumber: json["nutrientNumber"],
-        value: json["value"],
+        value: json["value"].toDouble(),
       );
+}
+
+class Recipe {
+  Recipe({
+    required this.description,
+    required this.calories,
+    required this.servingSize,
+    required this.servings,
+  });
+  String description;
+  double calories;
+  double servingSize;
+  double servings;
 }
 
 class _UserInfoScreenState extends State<UserInfoScreen> {
@@ -99,12 +115,59 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
     setState(() => this.scanResult = scanResult);
 
     print(scanResult);
-    fetchAPI();
+    requestServings();
+  }
+
+  double servingSize = 0.0;
+  String valueText = "";
+
+  Future<void> requestServings() async {
+    TextEditingController _Controller = TextEditingController();
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Serving size'),
+            content: TextField(
+              onChanged: (value) {
+                setState(() {
+                  valueText = value;
+                });
+              },
+              controller: _Controller,
+              decoration: InputDecoration(hintText: "in grams"),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                color: Colors.red,
+                textColor: Colors.white,
+                child: Text('CANCEL'),
+                onPressed: () {
+                  setState(() {
+                    Navigator.pop(context);
+                  });
+                },
+              ),
+              FlatButton(
+                color: Colors.green,
+                textColor: Colors.white,
+                child: Text('Submit'),
+                onPressed: () {
+                  setState(() {
+                    servingSize = double.parse(valueText);
+                    Navigator.pop(context);
+                    fetchAPI();
+                  });
+                },
+              ),
+            ],
+          );
+        });
   }
 
   Future fetchAPI() async {
     String keyAPI = '24UiyDidqSIdtVPaIMo0NnR8pZuE6CrzWqpmwjwZ';
-    //scanResult = '022000159359';
+    scanResult = '040000513070';
     final response = await http.get(Uri.parse(
         'https://api.nal.usda.gov/fdc/v1/foods/search?query=$scanResult&api_key=$keyAPI'));
     String scanCalorie;
@@ -114,13 +177,14 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
       // If the server did return a 200 OK response,
       // then parse the JSON.
       nutrientsVal = json.decode(response.body.toString());
+      final testing = FdaAPI.fromJson(nutrientsVal);
       List<dynamic> data = nutrientsVal["foods"];
       List<dynamic> data2 = data[0]["foodNutrients"];
       print(data2);
-      double proteinValue = data2[0]["value"].toDouble() * 4;
-      double fatValue = data2[1]["value"].toDouble() * 9;
-      double carbValue = data2[2]["value"].toDouble() * 4;
-      calories = proteinValue + fatValue + carbValue;
+      double energyValue = data2[3]["value"].toDouble();
+      print(energyValue);
+      print(servingSize);
+      calories = energyValue * servingSize / 100;
       scanCalorie = calories.toStringAsFixed(1);
       print(scanCalorie);
     } on PlatformException {

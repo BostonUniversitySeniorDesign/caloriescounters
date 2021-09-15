@@ -12,7 +12,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomColors.firebaseNavy,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -32,23 +32,37 @@ class _SignInScreenState extends State<SignInScreen> {
                     Flexible(
                       flex: 1,
                       child: Image.asset(
-                        'assets/ccounter.png',
+                        'assets/food.png',
                         height: 160,
                       ),
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Calories Counter',
+                      'Welcome to the Calorie Counter',
                       style: TextStyle(
-                        color: CustomColors.firebaseYellow,
-                        fontSize: 40,
+                        color: Colors.lightGreen,
+                        fontSize: 30,
                       ),
                     ),
                     Text(
-                      'Authentication',
+                      '',
                       style: TextStyle(
                         color: CustomColors.firebaseOrange,
-                        fontSize: 40,
+                        fontSize: 110,
+                      ),
+                    ),
+                    Text(
+                      '',
+                      style: TextStyle(
+                        color: CustomColors.firebaseOrange,
+                        fontSize: 110,
+                      ),
+                    ),
+                    Text(
+                      'Please sign in using your Google Account',
+                      style: TextStyle(
+                        color: CustomColors.firebaseOrange,
+                        fontSize: 15,
                       ),
                     ),
                   ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:caloriescounters/res/custom_colors.dart';
 
-
 import 'screens/sign_in_screen.dart';
 
 void main() {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'CaloriesCounter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.yellow,
         brightness: Brightness.dark,
       ),
       home: SignInScreen(),

@@ -12,7 +12,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFFF8F0E3),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -38,9 +38,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Welcome to the Calorie Counter',
+                      'Calorie Counter',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.lightGreen,
+                        color: Colors.green,
                         fontSize: 30,
                       ),
                     ),

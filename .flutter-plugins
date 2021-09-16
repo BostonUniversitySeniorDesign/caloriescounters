@@ -1,11 +1,11 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-2.5.2\\
-cloud_firestore_web=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-2.4.2\\
-firebase_auth=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-3.1.1\\
-firebase_auth_web=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-3.1.0\\
-firebase_core=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-1.6.0\\
-firebase_core_web=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-1.1.0\\
-flutter_barcode_scanner=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_barcode_scanner-2.0.0\\
-flutter_plugin_android_lifecycle=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_plugin_android_lifecycle-2.0.3\\
-google_sign_in=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in-5.1.0\\
-google_sign_in_web=C:\\Users\\hinlu\\OneDrive\\Desktop\\Senior_Design\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\google_sign_in_web-0.10.0+2\\
+cloud_firestore=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-2.5.2/
+cloud_firestore_web=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-2.4.2/
+firebase_auth=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-3.1.1/
+firebase_auth_web=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-3.1.0/
+firebase_core=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.6.0/
+firebase_core_web=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.1.0/
+flutter_barcode_scanner=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_barcode_scanner-2.0.0/
+flutter_plugin_android_lifecycle=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.3/
+google_sign_in=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.1.0/
+google_sign_in_web=/Users/amg1998/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.0+2/

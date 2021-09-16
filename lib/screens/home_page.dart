@@ -230,10 +230,10 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFFF8F0E3),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFFF8F0E3),
         title: AppBarTitle(),
       ),
       body: SafeArea(
@@ -272,23 +272,24 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               //       ),
               SizedBox(height: 16.0),
               Text(
-                'Hello',
+                'Hello, ' + _user.displayName!,
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.lightGreen,
+                  color: Colors.green,
                   fontSize: 26,
                 ),
               ),
               SizedBox(height: 8.0),
               Text(
-                _user.displayName!,
+                'To begin, click the Scan Barcode button.',
                 style: TextStyle(
-                  color: Colors.lightGreen,
-                  fontSize: 26,
+                  color: Colors.green,
+                  fontSize: 20,
                 ),
               ),
               SizedBox(height: 8.0),
               // email
-              TextButton(
+              ElevatedButton(
                 style: ButtonStyle(
                   foregroundColor:
                       MaterialStateProperty.all<Color>(Colors.white),
@@ -298,14 +299,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 child: Text('Scan Barcode'),
               ),
               SizedBox(height: 24.0),
-              Text(
-                scanResult == null ? 'Scan A code' : 'Scan result: $scanResult',
-                style: TextStyle(fontSize: 18),
-              ),
-              Text(
-                scanCalorie == null ? 'Scan A code' : 'Calories: $scanCalorie',
-                style: TextStyle(fontSize: 18),
-              ),
+
               Text(
                 '',
                 style: TextStyle(

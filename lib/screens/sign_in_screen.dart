@@ -46,20 +46,6 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     Text(
-                      '',
-                      style: TextStyle(
-                        color: CustomColors.firebaseOrange,
-                        fontSize: 110,
-                      ),
-                    ),
-                    Text(
-                      '',
-                      style: TextStyle(
-                        color: CustomColors.firebaseOrange,
-                        fontSize: 110,
-                      ),
-                    ),
-                    Text(
                       'Please sign in using your Google Account',
                       style: TextStyle(
                         color: CustomColors.firebaseOrange,

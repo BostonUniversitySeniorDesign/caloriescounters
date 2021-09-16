@@ -291,8 +291,8 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               // email
               ElevatedButton(
                 style: ButtonStyle(
-                  foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.orange.shade200),
                 ),
                 onPressed: () => barcodescan(),
                 //onPressed: () => fetchAPI(),
@@ -310,9 +310,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',
                 style: TextStyle(
-                    color: CustomColors.firebaseGrey.withOpacity(0.8),
-                    fontSize: 14,
-                    letterSpacing: 0.2),
+                    color: Colors.green, fontSize: 14, letterSpacing: 0.2),
               ),
               SizedBox(height: 16.0),
               _isSigningOut

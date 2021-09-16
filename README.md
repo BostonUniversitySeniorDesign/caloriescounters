@@ -1,5 +1,6 @@
 # caloriescounters
-<p align="center"> ![food](https://user-images.githubusercontent.com/36364359/133696673-c9e209ec-efdd-4bc6-965c-60227eb4a60b.png) </p>
+<p align="center">![food](https://user-images.githubusercontent.com/36364359/133696837-7727bebb-8227-44b9-8243-11b59f567e81.png)
+ </p>
 
 This will be a project that is primarily created using the Flutter which is an open source UI development kit that is created by Google. The project is called Calorie Counter and it is a simple app that is designed to keep track of the calories consumed over the day while grouping items and recipes for future usage. 
 

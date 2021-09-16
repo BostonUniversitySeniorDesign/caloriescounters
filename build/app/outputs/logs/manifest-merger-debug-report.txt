@@ -6,12 +6,14 @@ INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\an
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:flutter_barcode_scanner] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_barcode_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\bc497780c1ce60ed2e7015258fc2513f\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\2b298d710992f12b9e2e0e6710dea16b\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\25393f8ac452980a86076396f439a087\material-1.3.0\AndroidManifest.xml:17:1-24:12
@@ -25,6 +27,7 @@ MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\User
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\f263fcb179e74220f9266564bf6fa6b0\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\7cf679138cf02549fe31318cded8e8ba\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\79849768d58f138580dda53f83a37e8d\jetified-play-services-auth-base-16.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\369c59889e801cc817dee2786a28ea2c\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\aea04d6fba7da3c5709f185a7b521660\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-flags:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\1c8449ac071e141c054a696802b83215\jetified-play-services-flags-17.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\d4197fbf2b48443faa774440b5d65070\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -66,7 +69,9 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\hinlu\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\0341135a479a1847e64dc720fa73a9d9\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\8b0cce3f36a1c28e7df6e72849a13547\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\1d4efdb868696ea36efd004abeb8239d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\28fc14dd71318110837ca9c868d23487\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\560b27646107b8ffd10f07fb92b9a070\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\073fa8f73d9db3fc6f27ad8d002d7cd7\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -92,12 +97,18 @@ MERGED from [:google_sign_in] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\cal
 MERGED from [:google_sign_in] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
 	android:name
 		ADDED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:4:21-63
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:5:4-78
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:13:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\28fc14dd71318110837ca9c868d23487\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\28fc14dd71318110837ca9c868d23487\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:5:21-75
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
@@ -116,12 +127,16 @@ application
 ADDED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:9:4-46:19
 MERGED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:flutter_barcode_scanner] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_barcode_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-19:19
 MERGED from [:flutter_barcode_scanner] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_barcode_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-19:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\2b298d710992f12b9e2e0e6710dea16b\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\2b298d710992f12b9e2e0e6710dea16b\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
@@ -210,6 +225,8 @@ INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\an
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_barcode_scanner] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_barcode_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -222,6 +239,8 @@ MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\hinlu\.gradle\caches\tra
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\bc497780c1ce60ed2e7015258fc2513f\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\2b298d710992f12b9e2e0e6710dea16b\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\2b298d710992f12b9e2e0e6710dea16b\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:20:5-22:41
@@ -248,6 +267,8 @@ MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users
 MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\7cf679138cf02549fe31318cded8e8ba\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\79849768d58f138580dda53f83a37e8d\jetified-play-services-auth-base-16.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\79849768d58f138580dda53f83a37e8d\jetified-play-services-auth-base-16.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\369c59889e801cc817dee2786a28ea2c\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\369c59889e801cc817dee2786a28ea2c\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\aea04d6fba7da3c5709f185a7b521660\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\aea04d6fba7da3c5709f185a7b521660\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:17.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\1c8449ac071e141c054a696802b83215\jetified-play-services-flags-17.0.0\AndroidManifest.xml:20:5-44
@@ -330,8 +351,12 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\hinlu\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\8b0cce3f36a1c28e7df6e72849a13547\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\1d4efdb868696ea36efd004abeb8239d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\1d4efdb868696ea36efd004abeb8239d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\28fc14dd71318110837ca9c868d23487\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\28fc14dd71318110837ca9c868d23487\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\560b27646107b8ffd10f07fb92b9a070\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\560b27646107b8ffd10f07fb92b9a070\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\073fa8f73d9db3fc6f27ad8d002d7cd7\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\073fa8f73d9db3fc6f27ad8d002d7cd7\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -342,10 +367,14 @@ INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\an
 		INJECTED from C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\debug\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:74:9-80:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:33:9-37:35
 	android:exported
@@ -362,6 +391,12 @@ ADDED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\calor
 		ADDED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_auth] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
+ADDED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:cloud_firestore] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
 ADDED from [:firebase_core] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
@@ -452,6 +487,12 @@ ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\cb85e813550ceb859d5d8655b705694f\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e4186c293950d73169b2437483bf0308\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:21:17-111
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\hinlu\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
 	android:authorities

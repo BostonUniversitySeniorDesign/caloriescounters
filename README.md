@@ -15,11 +15,6 @@ Calorie Counter app is a cross-platform mobile app using [Flutter](https://githu
 - Google sign in authenication
 - Multi-user system, seperated database
 
-## Work Divisions
-Annamalai - Primary Focus on UI/Front End + Google Authentication System for Sign in Page + Inclusion of BarCode Scanner
-
-Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retrieve nutrition values. Set up database for saving and recieving users' scanned products.
- 
 ## Agile Software Design
 
 ### Design Process
@@ -32,9 +27,9 @@ Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retr
 4 - Finalize the app UI design, using a green & white color for base colors of the application and added a welcome message to user. [Hin Lui](https://github.com/jshumhl) sums up the entire projects by writing a comprehensible Readme 
 
 ### Work Divisions
-Annamalai - Sign in page. Primary Focus on UI/Front End + Google Authentication System + Inclusion of BarCode Scanner
+[Annamalai](https://github.com/amg2005) - Sign in page. Primary Focus on UI/Front End + Google Authentication System + Inclusion of BarCode Scanner
 
-Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retrieve nutrition values. Set up database for saving and recieving users' scanned products.
+[Hin Lui](https://github.com/jshumhl)- User main page UI design, connect Barcode scanner with FDA API and retrieve nutrition values. Set up database for saving and recieving users' scanned products.
 
 ## REST API
 Data transformation. Created classes to store data retrieved from FDA API.
@@ -137,4 +132,4 @@ Each user's collection is named with unique user id. Scanned foods are saved in 
 
 ## Authors
 
-Made by [Hin Lui Shum @jshumhl](https://github.com/jshumhl) and [@Annamalai](https://github.com/amg2005)
+Made by [Hin Lui Shum @jshumhl](https://github.com/jshumhl) and [Annamalai @amg2005](https://github.com/amg2005)

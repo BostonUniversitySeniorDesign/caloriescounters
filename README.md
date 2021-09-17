@@ -23,24 +23,100 @@ Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retr
 ## Agile Software Design
 
 ### Design Process
-1 - Initial started design of app based on React-Native framework & Google Firebase for storage options. After building the initial UI using React Native, the integration of Google OAuth into the app was deprecated for React. After further communicated, we mutually decided to switch to Flutter in order to keep all aspects of the app consistent to Google based frameworks. 
+1 - Initial started design of app based on React-Native framework & Google Firebase for storage options. After building the initial UI using React Native, the integration of Google OAuth into the app was deprecated for React. After further communicated, we mutually decided to switch to Flutter in order to keep all aspects of the app consistent to Google based frameworks. Initially designed a 4-page application (overcomplicated).
 
 2- Redesigned App basic structure setup. We divided our work into two: The sign-in page and the main page after sign in. This would include functions such as Google sign-up/sign-in, barcode scanner to retrieve nutrition of products, user main dashboard to view scanned products history.
 
-3- Place holder sign in page with google oauth was built, which was succeeded by the development of the features within the home page of the app. Implemented functions in the following order: barcode scanner, connect FDA API, retrieve nutrition values data, pop up box requesting for serving size, implementation of FireStore to save scanned products, Final UI design.
+3- Place holder sign in page with google oauth was built, which was succeeded by the development of the features within the home page of the app. Implemented functions in the following order: barcode scanner, connect FDA API, retrieve nutrition values data, pop up box requesting for serving size, implementation of FireStore to save scanned products.
 
-4 - FILL IN HOW THE FEATURES WERE DONE.
+4 - Finalize the app UI design, using a green & white color for base colors of the application and added a welcome message to user.
 
 ### Work Divisions
 Annamalai - Sign in page. Primary Focus on UI/Front End + Google Authentication System + Inclusion of BarCode Scanner
 
 Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retrieve nutrition values. Set up database for saving and recieving users' scanned products.
 
- <p align="center"> Rest APIs </p>
+## REST API
+Data transformation. Created classes to store data retrieved from FDA API.
+```dart
+class FdaAPI {
+  List<Foods> foods = [];
+
+  FdaAPI({required this.foods});
+
+  factory FdaAPI.fromJson(Map<String, dynamic> json) => FdaAPI(
+        foods: List<Foods>.from(json["foods"].map((x) => Foods.fromJson(x))),
+      );
+}
+
+class Foods {
+  String description;
+  List<FoodNutrients> foodNutrients = [];
+
+  Foods({required this.description, required this.foodNutrients});
+
+  factory Foods.fromJson(Map<String, dynamic> json) => Foods(
+        description: json["description"],
+        foodNutrients: List<FoodNutrients>.from(
+            json["foodNutrients"].map((x) => FoodNutrients.fromJson(x))),
+      );
+}
+
+class FoodNutrients {
+  FoodNutrients({
+    required this.nutrientId,
+    required this.nutrientName,
+    required this.nutrientNumber,
+    required this.value,
+  });
+
+  int nutrientId;
+  String nutrientName;
+  String nutrientNumber;
+  double value;
+
+  factory FoodNutrients.fromJson(Map<String, dynamic> json) => FoodNutrients(
+        nutrientId: json["nutrientId"],
+        nutrientName: json["nutrientName"],
+        nutrientNumber: json["nutrientNumber"],
+        value: json["value"].toDouble(),
+      );
+}
+```
+To obtain data from or store data into Firebase, we need a way to convert data inside the class to Firebase readable data.
+Clients can infinitely add scanned products in a recipe folder under a collection named by their uid. Each user has seperated database and their scanned products will never be mixed.
+```dart
+recipeCollection.doc(_user.uid).set(
+        {'name': _user.displayName, 'uid': _user.uid, 'email': _user.email});
+
+    recipeCollection.doc(_user.uid).collection('recipes').add({
+      "foodName": foodName.toString(),
+      "scanTime": now.toString(),
+      "servingSize": servingSize.toString(),
+      "calories": scanCalorie.toString()
+    });
+```
 
 
- <p align="center"> Testing and Results </p>
+## Testing and Results
 
-ADD PICTURES OF THE APP AND INITIAL BUGS
+### Page Layout
+Sign-in Screen - A logo in the center with a Google Sign-In button
 
+Home-page Screen - Our main page consists of a welcome message, sign-out button, scan barcode button and a list view of past scanned products
 
+### Google Sign-In
+Google sign up/sign in based on Firebase. New database setup for new user signed in. 
+
+### Scan barcode, ask for servings, calculate calories
+Click the scan barcode button to start scanning, can switch camera side, turn on/off flashlight.
+When a barcode is successfully scanned, a dialog box pop up to request for servings.
+
+### List view of scanned products
+Scanned products will be saved in the database with the following entries: Product description, calories, sercing size, scanned date/time
+
+### Each user has their own database
+User A can only see A's previous scanned products. User B has a different collection.
+
+### Firebase/Firestore backend
+Firestore database

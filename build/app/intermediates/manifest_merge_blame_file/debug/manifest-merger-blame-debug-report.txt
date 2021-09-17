@@ -45,7 +45,7 @@
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
 28-->C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:11:9-43
-29        android:label="caloriescounters"
+29        android:label="Calories Counter"
 29-->C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\android\app\src\main\AndroidManifest.xml:10:9-41
 30        android:largeHeap="true"
 30-->[:flutter_barcode_scanner] C:\Users\hinlu\OneDrive\Desktop\Caloriecounter\caloriescounters\build\flutter_barcode_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-33

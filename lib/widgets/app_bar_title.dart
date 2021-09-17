@@ -14,7 +14,7 @@ class AppBarTitle extends StatelessWidget {
         ),
         SizedBox(width: 8),
         Text(
-          'Calorie Counter',
+          'Calories Counter',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,

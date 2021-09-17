@@ -233,7 +233,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
       backgroundColor: Color(0xFFF8F0E3),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xFFF8F0E3),
+        backgroundColor: Colors.green,
         title: AppBarTitle(),
       ),
       body: SafeArea(
@@ -244,75 +244,19 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
             bottom: 20.0,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(),
-              // _user.photoURL != null
-              //     ? ClipOval(
-              //         child: Material(
-              //           color: CustomColors.firebaseGrey.withOpacity(0.3),
-              //           child: Image.network(
-              //             _user.photoURL!,
-              //             fit: BoxFit.fitHeight,
-              //           ),
-              //         ),
-              //       )
-              //     : ClipOval(
-              //         child: Material(
-              //           color: CustomColors.firebaseGrey.withOpacity(0.3),
-              //           child: Padding(
-              //             padding: const EdgeInsets.all(16.0),
-              //             child: Icon(
-              //               Icons.person,
-              //               size: 60,
-              //               color: CustomColors.firebaseGrey,
-              //             ),
-              //           ),
-              //         ),
-              //       ),
               SizedBox(height: 16.0),
               Text(
                 'Hello, ' + _user.displayName!,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
                 style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 26,
-                ),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25),
               ),
-              SizedBox(height: 8.0),
-              Text(
-                'To begin, click the Scan Barcode button.',
-                style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 20,
-                ),
-              ),
-              SizedBox(height: 8.0),
-              // email
-              ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.orange.shade200),
-                ),
-                onPressed: () => barcodescan(),
-                //onPressed: () => fetchAPI(),
-                child: Text('Scan Barcode'),
-              ),
-              SizedBox(height: 24.0),
-
-              Text(
-                '',
-                style: TextStyle(
-                    color: CustomColors.firebaseGrey.withOpacity(0.8),
-                    fontSize: 65,
-                    letterSpacing: 0.2),
-              ),
-              Text(
-                'You are now signed in using your Google account. To sign out of your account click the "Sign Out" button below.',
-                style: TextStyle(
-                    color: Colors.green, fontSize: 14, letterSpacing: 0.2),
-              ),
-              SizedBox(height: 16.0),
+              SizedBox(height: 4.0),
               _isSigningOut
                   ? CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
@@ -320,7 +264,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   : ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          Colors.redAccent,
+                          Colors.redAccent.shade200,
                         ),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
@@ -340,11 +284,11 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                             .pushReplacement(_routeToSignInScreen());
                       },
                       child: Padding(
-                        padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                        padding: EdgeInsets.only(top: 2.0, bottom: 2.0),
                         child: Text(
                           'Sign Out',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 10,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                             letterSpacing: 2,
@@ -352,6 +296,39 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                         ),
                       ),
                     ),
+              SizedBox(height: 8.0),
+              Text(
+                '\nTo begin, click the Scan Barcode button.\nAnd enter the serving size in grams.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(Colors.green.shade200),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  )),
+                ),
+                onPressed: () => barcodescan(),
+                //onPressed: () => fetchAPI(),
+                child: Padding(
+                  padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                  child: Text(
+                    'Scan Barcode',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 2,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 8.0),
               StreamBuilder<QuerySnapshot>(
                   stream: FirebaseFirestore.instance
                       .collection("users")
@@ -397,63 +374,9 @@ Widget buildCard(
   String servingSize,
   String calories,
 ) {
-  // var date = new DateTime.fromMillisecondsSinceEpoch(1000 * submittedTime);
-  print(scanTime);
-  print(calories);
   return GestureDetector(
-    onTap: () async {
-      print('ontap');
-      await showDialog(
-          context: context,
-          builder: (_) => Dialog(
-                  child: Container(
-                height: 480,
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 14,
-                    ),
-                    AutoSizeText(
-                      'Food: ' + foodName,
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                      maxLines: 1,
-                    ),
-                    AutoSizeText(
-                      'Calories : ' + calories + 'kcal',
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                      maxLines: 1,
-                    ),
-                    AutoSizeText(
-                      'Serving Size : ' + servingSize,
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                      maxLines: 1,
-                    ),
-                    AutoSizeText(
-                      'Scanned Time : ' + scanTime.toIso8601String(),
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                      maxLines: 1,
-                    ),
-                  ],
-                ),
-              )));
-    },
     child: Card(
+      color: Color(0xFFC7F6B6),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
@@ -464,7 +387,7 @@ Widget buildCard(
         child: Column(
           children: <Widget>[
             AutoSizeText(
-              scanTime.toString(),
+              foodName.toString(),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -483,11 +406,19 @@ Widget buildCard(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Food: ",
+                        "Calorie:  ",
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 13,
+                        ),
+                      ),
+                      Text(
+                        "Serving Size:  ",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
@@ -495,15 +426,7 @@ Widget buildCard(
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        "calorie:  ",
-                        style: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 13,
                         ),
                       ),
                     ],
@@ -514,29 +437,29 @@ Widget buildCard(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       AutoSizeText(
-                        foodName.toString(),
+                        calories + 'kcal',
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 13,
+                        ),
+                        maxLines: 1,
+                      ),
+                      AutoSizeText(
+                        servingSize + 'g',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
                         ),
                         maxLines: 1,
                       ),
                       AutoSizeText(
                         scanTime.toIso8601String(),
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        maxLines: 1,
-                      ),
-                      AutoSizeText(
-                        calories + 'kcal',
-                        style: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 13,
                         ),
                         maxLines: 1,
                       ),

@@ -29,7 +29,7 @@ Hin Lui- User main page UI design, connect Barcode scanner with FDA API and retr
 
 3- Place holder sign in page with google oauth was built, which was succeeded by the development of the features within the home page of the app. Implemented functions in the following order: barcode scanner, connect FDA API, retrieve nutrition values data, pop up box requesting for serving size, implementation of FireStore to save scanned products.
 
-4 - Finalize the app UI design, using a green & white color for base colors of the application and added a welcome message to user.
+4 - Finalize the app UI design, using a green & white color for base colors of the application and added a welcome message to user. [Hin Lui](https://github.com/jshumhl) sums up the entire projects by writing a comprehensible Readme 
 
 ### Work Divisions
 Annamalai - Sign in page. Primary Focus on UI/Front End + Google Authentication System + Inclusion of BarCode Scanner
@@ -101,33 +101,40 @@ recipeCollection.doc(_user.uid).set(
 ## Testing and Results
 
 ### Page Layout
-Sign-in Screen - A logo in the center with a Google Sign-In button
-![Sign-in screen](https://github.com/amg1998/caloriescounters/blob/main/lib/media/signin_page.jpg)
+#### Sign-in Screen - A logo in the center with a Google Sign-In button
 
-Home-page Screen - Our main page consists of a welcome message, sign-out button, scan barcode button and a list view of past scanned products
-![Home-page screen](https://github.com/amg1998/caloriescounters/blob/main/lib/media/mainpage.jpg)
+<img src="https://github.com/amg1998/caloriescounters/blob/main/lib/media/signin_page.jpg" width="300">
+
+#### Home-page Screen - Our main page consists of a welcome message, sign-out button, scan barcode button and a list view of past scanned products
+
+<img src="https://github.com/amg1998/caloriescounters/blob/main/lib/media/mainpage.jpg" width="300">
 
 ### Google Sign-In
 Google sign up/sign in based on Firebase. New database setup for new user signed in. 
+
 ![Google Sign-in](https://github.com/amg1998/caloriescounters/blob/main/lib/media/googlesignin.gif)
 
 ### Scan barcode, ask for servings, calculate calories
 Click the scan barcode button to start scanning, can switch camera side, turn on/off flashlight.
 When a barcode is successfully scanned, a dialog box pop up to request for servings.
+
 ![Barcode Scan](https://github.com/amg1998/caloriescounters/blob/main/lib/media/scanbarcode.gif)
 
 ### List view of scanned products
 Scanned products will be saved in the database with the following entries: Product description, calories, sercing size, scanned date/time
+
 ![List View](https://github.com/amg1998/caloriescounters/blob/main/lib/media/infinite_list.gif)
 
 ### Each user has their own database
 User A can only see A's previous scanned products. User B has a different collection.
+
 ![Different database](https://github.com/amg1998/caloriescounters/blob/main/lib/media/differentaccount.gif)
 
 ### Firebase/Firestore backend
-Each user's collection is named with unique user id. Scanned foods are saved in collection "recipes" under the document "uid" in "users" collection.
+Each user's collection is named with unique user id. Scanned foods are saved in collection "recipes" under the document "uid" in "users" collection. (please wait for the gif to load)
+
 ![Firestore database](https://github.com/amg1998/caloriescounters/blob/main/lib/media/firebasebackend.gif)
 
 ## Authors
 
-Made by [@jshumhl](https://github.com/jshumhl) and [@Annamalai](https://github.com/amg2005)
+Made by [Hin Lui Shum @jshumhl](https://github.com/jshumhl) and [@Annamalai](https://github.com/amg2005)

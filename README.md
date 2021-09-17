@@ -1,8 +1,8 @@
 # Calories Counter App
 
-<p align="center">
-<img![food](https://user-images.githubusercontent.com/36364359/133696837-7727bebb-8227-44b9-8243-11b59f567e81.png) />
-</p>
+
+![food](https://github.com/amg1998/caloriescounters/blob/main/lib/media/icon.png)
+
 
 ## What is Calorie Counter? 
 Calorie Counter app is a cross-platform mobile app using [Flutter](https://github.com/flutter/flutter) that is designed to keep track of the calories consumed over the day while grouping items and recipes for future usage.
@@ -102,21 +102,32 @@ recipeCollection.doc(_user.uid).set(
 
 ### Page Layout
 Sign-in Screen - A logo in the center with a Google Sign-In button
+![Sign-in screen](https://github.com/amg1998/caloriescounters/blob/main/lib/media/signin_page.jpg)
 
 Home-page Screen - Our main page consists of a welcome message, sign-out button, scan barcode button and a list view of past scanned products
+![Home-page screen](https://github.com/amg1998/caloriescounters/blob/main/lib/media/mainpage.jpg)
 
 ### Google Sign-In
 Google sign up/sign in based on Firebase. New database setup for new user signed in. 
+![Google Sign-in](https://github.com/amg1998/caloriescounters/blob/main/lib/media/googlesignin.gif)
 
 ### Scan barcode, ask for servings, calculate calories
 Click the scan barcode button to start scanning, can switch camera side, turn on/off flashlight.
 When a barcode is successfully scanned, a dialog box pop up to request for servings.
+![Barcode Scan](https://github.com/amg1998/caloriescounters/blob/main/lib/media/scanbarcode.gif)
 
 ### List view of scanned products
 Scanned products will be saved in the database with the following entries: Product description, calories, sercing size, scanned date/time
+![List View](https://github.com/amg1998/caloriescounters/blob/main/lib/media/infinite_list.gif)
 
 ### Each user has their own database
 User A can only see A's previous scanned products. User B has a different collection.
+![Different database](https://github.com/amg1998/caloriescounters/blob/main/lib/media/differentaccount.gif)
 
 ### Firebase/Firestore backend
-Firestore database
+Each user's collection is named with unique user id. Scanned foods are saved in collection "recipes" under the document "uid" in "users" collection.
+![Firestore database](https://github.com/amg1998/caloriescounters/blob/main/lib/media/firebasebackend.gif)
+
+## Authors
+
+Made by [@jshumhl](https://github.com/jshumhl) and [@Annamalai](https://github.com/amg2005)
